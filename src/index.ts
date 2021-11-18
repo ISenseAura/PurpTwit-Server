@@ -11,6 +11,8 @@ app.get("/", (req: any, res: any) => {
   res.send("Hello ");
 });
 
+console.log("test");
+
 app.listen(port, () => {
   console.log(`PurpTwit Backend listening at http://localhost:${port}`);
 });
