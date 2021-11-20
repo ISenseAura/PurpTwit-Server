@@ -7,11 +7,9 @@ app.use(express.json());
 
 app.use("/api/auth", require("./routes/authentication"));
 
-app.get("/", (req: any, res: any) => {
-  res.send("Hello ");
+app.get("/restart", (req: any, res: any) => {
+ process.exit(-1);
 });
-
-console.log("test");
 
 app.listen(port, () => {
   console.log(`PurpTwit Backend listening at http://localhost:${port}`);
