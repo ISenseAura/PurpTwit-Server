@@ -12,11 +12,17 @@ following_count : Number;
 //UPDATE LATER 
 
 interface UserType {
-  username : String;
-  email : String;
-  password : String;
-  }
+  username: String;
+  email: String;
+  password: String;
+}
 
-export default UserType;
+interface UserInstance extends Omit<UserType,"password"> {
+  username: String;
+  email: String;
+  password? : String;
+}
+
+export { UserType, UserInstance };
 
 

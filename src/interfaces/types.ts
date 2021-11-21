@@ -1,4 +1,5 @@
-import UserType from "./user";
+import { UserType, UserInstance} from "./user";
 import PostType  from "./post";
+import DbType  from "./db";
 
-export { UserType, PostType };
+export { UserType, UserInstance, PostType, DbType };
