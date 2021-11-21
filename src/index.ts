@@ -1,4 +1,8 @@
 import express from "express";
+import Db from "./db";
+
+//import all local Databases
+Db.importDatabases();
 
 const app: any = express();
 const port: number = 5000;
