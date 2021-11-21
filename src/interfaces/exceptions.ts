@@ -9,6 +9,16 @@ class UnauthorizedException extends Error {
   }
 }
 
+class UserExistsException extends Error {
+  constructor(msg?: string) {
+    super();
+    this.name = "UserExistsException";
+    this.message = msg ? msg : "Cannot login with those credentials";
+    // Set the prototype explicitly.
+    Object.setPrototypeOf(this, UserExistsException.prototype);
+  }
+}
+
 class LoginException extends Error {
   constructor(msg?: string) {
     super();
@@ -30,4 +40,6 @@ class NotFoundException extends Error {
   }
 }
 
-export { UnauthorizedException, LoginException, NotFoundException };
+
+
+export { UnauthorizedException, LoginException, NotFoundException,UserExistsException };
